@@ -27,7 +27,7 @@ def draw_prediction(img, classes, COLORS, class_id, confidence, x, y, x_plus_w, 
     cv2.putText(img, label, (x-10,y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
 
-def detect_objects(image, is_image, config='object_detection/yolov3.cfg', weights='object_detection/yolov3.weights', cls_file='object_detection/yolov3.txt'):
+def detect_objects(image, is_image, config='yolov3.cfg', weights='yolov3.weights', cls_file='yolov3.txt'):
     if is_image:
         image = cv2.imread(image)
    
@@ -90,11 +90,11 @@ def detect_objects(image, is_image, config='object_detection/yolov3.cfg', weight
     #cv2.imwrite("object-detection.jpg", image)
     return objects
 
-#image = 'dog.jpg'
-#cfile = 'yolov3.cfg'
-#weights = 'yolov3.weights'
-#classes = 'yolov3.txt'
-#
-#objects = detect_objects(image, 1, cfile, weights, classes)
-#
-#print (objects)
+image = 'dog.jpg'
+cfile = 'yolov3.cfg'
+weights = 'yolov3.weights'
+classes = 'yolov3.txt'
+
+objects = detect_objects(image, 1, cfile, weights, classes)
+
+print (objects)

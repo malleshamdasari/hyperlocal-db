@@ -25,7 +25,7 @@ When it comes to object detection, popular detection frameworks are
  
  Provided all the files are in the current directory, below command will apply object detection on the input image `dog.jpg`.
  
- `$ python yolo_opencv.py --image dog.jpg --config yolov3.cfg --weights yolov3.weights --classes yolov3.txt`
+ `$ python yolo_opencv.py`
  
  
  **Command format** 
